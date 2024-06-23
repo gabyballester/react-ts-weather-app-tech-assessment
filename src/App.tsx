@@ -1,9 +1,16 @@
 import { Box } from '@chakra-ui/react';
-import { Content, Header } from './components';
+import { WeatherEnum, weatherGradients } from './constants';
+import { Header, Content } from './components/';
 
 const App: React.FC = () => {
   return (
-    <Box minH="100vh" bgSize="cover" display="flex" flexDirection="column">
+    <Box
+      bgGradient={weatherGradients[WeatherEnum.Night]}
+      minH="100vh"
+      bgSize="cover"
+      display="flex"
+      flexDirection="column"
+    >
       <Header />
       <Content />
     </Box>

@@ -30,7 +30,9 @@ module.exports = {
       { allowConstantExport: true },
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'react-refresh/only-export-components': 'off',
+    'import/no-named-as-default-member': 'off',
   },
   parserOptions: {
     project: ["./tsconfig.node.json", "./tsconfig.app.json"],
