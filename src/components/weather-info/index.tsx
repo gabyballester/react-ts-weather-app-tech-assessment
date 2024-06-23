@@ -11,7 +11,7 @@ export const WeatherInfo = () => {
   const { t: translate } = useTranslation(TranslationFileEnum.GLOBAL);
   const { language } = useLanguage();
   const { selectedCity } = useSelector((state: RootState) => state.cityState);
-  const { currentWeather } = useSelector(
+  const { currentWeather, error } = useSelector(
     (state: RootState) => state.weatherState,
   );
 
@@ -21,7 +21,9 @@ export const WeatherInfo = () => {
 
   return (
     <Box p="6" display="flex" flexDirection="column" alignItems="center">
-      {currentWeather && (
+      {error || !currentWeather ? (
+        <p>No data</p>
+      ) : (
         <>
           <Box
             display="flex"
