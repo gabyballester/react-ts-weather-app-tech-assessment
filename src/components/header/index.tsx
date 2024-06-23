@@ -17,11 +17,14 @@ export const Header = () => {
       bg="rgba(255, 255, 255, 0.7)"
       padding={6}
     >
-      <Heading textAlign="center" size="md">
+      <Heading textAlign="center" size="md" width="300px">
         {t('weather-app')}
       </Heading>
-      <CitySelector />
-      <LanguageSwitch />
+
+      <Box display="flex" gap="10">
+        <CitySelector />
+        <LanguageSwitch />
+      </Box>
     </Box>
   );
 };

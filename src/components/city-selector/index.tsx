@@ -1,17 +1,18 @@
-import { Select, Tooltip } from '@chakra-ui/react';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TranslationFileEnum } from '../../contexts';
-
-const citiesMock = ['london', 'toronto', 'singapore'];
+import { useDispatch, useSelector } from 'react-redux';
+import { Select, Tooltip } from '@chakra-ui/react';
+import { selectCity } from '../../redux/city/slice';
+import { RootState } from '../../redux/store';
 
 export const CitySelector = () => {
   const { t } = useTranslation(TranslationFileEnum.GLOBAL);
-  const [selectedCity, setSelectedCity] = useState('london');
+  const dispatch = useDispatch();
+  const city = useSelector((state: RootState) => state.cityState);
 
   const setCity = (e: ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value;
-    setSelectedCity(value);
+    dispatch(selectCity(e.target.value));
   };
 
   return (
@@ -23,8 +24,13 @@ export const CitySelector = () => {
       color="black"
       openDelay={200}
     >
-      <Select value={selectedCity} onChange={setCity} width="200px" bg="white">
-        {citiesMock.map((city) => (
+      <Select
+        value={city.selectedCity}
+        onChange={setCity}
+        width="200px"
+        bg="white"
+      >
+        {city.availableCities.map((city) => (
           <option key={city} value={city}>
             {t(city)}
           </option>

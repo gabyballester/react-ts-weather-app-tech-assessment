@@ -1,6 +1,8 @@
-# React + Vite + TypeScript Boilerplate
+# Project: Weather App
 
-This starter boilerplate provides a streamlined setup for React development using Vite, TypeScript, ESLint, Prettier, Husky, Pre-commit hooks, Jest, and React Testing Library.
+## Made with: React + TypeScript
+
+This is a weather forecast application that allows users to switch between different languages [Spanish, English] and cities [London, Toronto, Singapore]. This capability provides a personalized and adaptable experience, ensuring users can access relevant information conveniently and effectively.
 
 ## Features
 
@@ -12,10 +14,9 @@ This starter boilerplate provides a streamlined setup for React development usin
 - **Husky**: Git hooks made easy.
 - **Jest**: Delightful JavaScript testing.
 - **React Testing Library**: Lightweight testing library for React.
-
-## Usage
-
-This boilerplate is ready to be cloned or forked for immediate use. It includes all necessary configurations and dependencies to kickstart your React project with confidence.
+- **Chakra UI**: Component library for styling.
+- **i18Next**: Internationalization library for English and Spanish translations.
+- **Redux Toolkit**: State management library for managing global state.
 
 ### Getting Started
 
