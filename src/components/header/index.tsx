@@ -5,7 +5,7 @@ import { TranslationFileEnum } from '../../contexts';
 import { CitySelector } from '../city-selector';
 
 export const Header = () => {
-  const { t } = useTranslation(TranslationFileEnum.GLOBAL);
+  const { t: translate } = useTranslation(TranslationFileEnum.GLOBAL);
 
   return (
     <Box
@@ -17,7 +17,7 @@ export const Header = () => {
       padding={6}
     >
       <Heading textAlign="center" size="md" width="300px">
-        {t('weather-app')}
+        {translate('weather-app')}
       </Heading>
 
       <Box display="flex" gap="10">

@@ -4,13 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { LanguageEnum, TranslationFileEnum, useLanguage } from '../../contexts';
 
 export const LanguageSwitch = () => {
-  const { t } = useTranslation(TranslationFileEnum.GLOBAL);
+  const { t: translate } = useTranslation(TranslationFileEnum.GLOBAL);
   const { language, changeLanguage } = useLanguage();
 
   return (
     <Box display="flex" gap="1rem">
       <Tooltip
-        label={t('change-to-spanish')}
+        label={translate('change-to-spanish')}
         hasArrow
         placement="bottom"
         bg="gray.300"
@@ -22,11 +22,11 @@ export const LanguageSwitch = () => {
           colorScheme={language === LanguageEnum.ES ? 'teal' : 'gray'}
           width="100px"
         >
-          {t('spanish')}
+          {translate('spanish')}
         </Button>
       </Tooltip>
       <Tooltip
-        label={`${t('change-to-english')}`}
+        label={`${translate('change-to-english')}`}
         hasArrow
         placement="bottom"
         bg="gray.300"
@@ -38,7 +38,7 @@ export const LanguageSwitch = () => {
           colorScheme={language === LanguageEnum.EN ? 'teal' : 'gray'}
           width="100px"
         >
-          {t('english')}
+          {translate('english')}
         </Button>
       </Tooltip>
     </Box>

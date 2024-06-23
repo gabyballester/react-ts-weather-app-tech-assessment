@@ -1,8 +1,7 @@
 // src/redux/weatherSlice.ts
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ApiWeatherResponse, Weather } from '../../types';
-import { mapWeatherData } from '../../mappers';
+import { Weather } from '../../types';
 
 export interface WeatherState {
   currentWeather: Weather | null;
@@ -26,8 +25,8 @@ export const weatherSlice = createSlice({
       state.loading = true;
       state.error = null;
     },
-    fetchWeatherSuccess: (state, action: PayloadAction<ApiWeatherResponse>) => {
-      state.newWeather = mapWeatherData(action.payload);
+    fetchWeatherSuccess: (state, action: PayloadAction<Weather>) => {
+      state.newWeather = action.payload;
       state.currentWeather = state.newWeather;
       state.loading = false;
       state.error = null;

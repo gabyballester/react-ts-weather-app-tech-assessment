@@ -14,7 +14,7 @@ import { store } from './redux/store.ts';
 
 i18next.use(initReactI18next).init({
   fallbackLng: 'en',
-  debug: true, // helps to debug missing translation keys
+  debug: false, // helps to debug missing translation keys
   interpolation: { escapeValue: false },
   lng: getInitialLanguage(),
   resources: {
