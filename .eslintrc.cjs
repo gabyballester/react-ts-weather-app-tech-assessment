@@ -13,7 +13,7 @@ module.exports = {
     'plugin:prettier/recommended',
     "plugin:react/jsx-runtime"
   ],
-  ignorePatterns: ['dist', '.eslintrc.js', "__mocks__/svgMock.js"],
+  ignorePatterns: ['dist', '.eslintrc.js', "src/__mocks__/svgMock.js"],
   parser: '@typescript-eslint/parser',
   plugins: [
     'react-refresh',
