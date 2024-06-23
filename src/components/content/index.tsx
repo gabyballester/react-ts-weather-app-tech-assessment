@@ -1,9 +1,20 @@
 import { Box } from '@chakra-ui/react';
+import { WeatherCard } from '../weather-card';
 
-export const Content = () => {
+export const MainContainer = () => {
   return (
-    <Box as="main" p={4} color="black" bg="rgba(255, 255, 255, 0.7)" flex="1">
-      content
+    <Box
+      as="main"
+      p={4}
+      width="100%"
+      height="100%"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      color="black"
+      paddingTop="150px"
+    >
+      <WeatherCard />
     </Box>
   );
 };

@@ -7,5 +7,8 @@
   "select-city": "Selecciona ciudad...",
   "london": "Londres",
   "toronto": "Toronto",
-  "singapore": "Singapur"
+  "singapore": "Singapur",
+  "current-temperature": "Actual",
+  "min-temperature": "Min.",
+  "max-temperature": "Max."
 }

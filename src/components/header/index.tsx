@@ -14,7 +14,6 @@ export const Header = () => {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
-      bg="rgba(255, 255, 255, 0.7)"
       padding={6}
     >
       <Heading textAlign="center" size="md" width="300px">
