@@ -1,6 +1,6 @@
 import { Box, Heading } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from '../LanguageSwitcher';
+import { LanguageSwitch } from '../language-switch';
 import { TranslationFileEnum } from '../../contexts';
 
 export const Header = () => {
@@ -19,7 +19,7 @@ export const Header = () => {
       <Heading textAlign="center" size="md">
         {t('weather-app')}
       </Heading>
-      <LanguageSwitcher />
+      <LanguageSwitch />
     </Box>
   );
 };
