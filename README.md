@@ -18,13 +18,24 @@ This is a weather forecast application that allows users to switch between diffe
 
 ### Getting Started
 
-1. **Clone the repository & Install dependencies**:
+1. **Clone the repository**
 
 ```
-  npm install
+  git clone <repository-url>
+  cd <repository-directory>
 ```
 
-2. **Start the development server:**
+2. **Set up environment variables**
+
+Ensure you have a .env file in the root of your project. You can use the provided .env.sample file as a template. This file should include the necessary endpoints and API key for the application to run correctly.
+
+3. **Install dependencies**:
+
+```
+npm install
+```
+
+4. **Start the development server:**
 
 ```
   npm run dev
@@ -46,6 +57,12 @@ npm run test: Runs Jest to execute tests.
 npm run test:watch: Runs Jest in watch mode.
 npm run test:watch:all: Runs Jest in watch all mode.
 ```
+
+### Testing
+
+In addition to a dummy test, there are tests to ensure it behaves as expected, which are listed here:
+
+- App.test.tsx
 
 ### Contributing
 

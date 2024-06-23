@@ -1,5 +1,3 @@
-// src/redux/weatherSlice.ts
-
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Weather } from '../../types';
 

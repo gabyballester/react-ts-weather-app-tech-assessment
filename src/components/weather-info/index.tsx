@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
 import { fetchWeatherAction } from '../../redux/weather/action';
-import { capitalizeText } from '../../helpers';
 
 export const WeatherInfo = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -30,9 +29,7 @@ export const WeatherInfo = () => {
             justifyContent="center"
             gap="1"
           >
-            <Text fontWeight="bold">
-              {capitalizeText(translate(currentWeather.description), language)}
-            </Text>
+            <Text fontWeight="bold">{currentWeather.description}</Text>
             <Image src={currentWeather.icon} alt="Weather icon" />
           </Box>
           <Text textAlign="center" fontWeight="semibold" marginBottom="3">
