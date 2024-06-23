@@ -1,16 +1,16 @@
-export interface Coord {
+export interface ApiCoord {
   lon: number;
   lat: number;
 }
 
-export interface Weather {
+export interface ApiWeather {
   id: number;
   main: string;
   description: string;
   icon: string;
 }
 
-export interface Main {
+export interface ApiMain {
   temp: number;
   feels_like: number;
   temp_min: number;
@@ -19,16 +19,16 @@ export interface Main {
   humidity: number;
 }
 
-export interface Wind {
+export interface ApiWind {
   speed: number;
   deg: number;
 }
 
-export interface Clouds {
+export interface ApiClouds {
   all: number;
 }
 
-export interface Sys {
+export interface ApiSys {
   type: number;
   id: number;
   country: string;
@@ -36,15 +36,23 @@ export interface Sys {
   sunset: number;
 }
 
-export interface WeatherResponse {
-  coord: Coord;
-  weather: Weather[];
-  main: Main;
-  wind: Wind;
-  clouds: Clouds;
+export interface ApiWeatherResponse {
+  coord: ApiCoord;
+  weather: ApiWeather[];
+  main: ApiMain;
+  wind: ApiWind;
+  clouds: ApiClouds;
   dt: number;
-  sys: Sys;
+  sys: ApiSys;
   id: number;
   name: string;
   cod: number;
+}
+
+export interface Weather {
+  icon: string;
+  description: string;
+  temperature: number;
+  temp_min: number;
+  temp_max: number;
 }

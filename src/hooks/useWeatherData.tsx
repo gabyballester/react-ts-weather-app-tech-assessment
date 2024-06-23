@@ -1,34 +1,38 @@
-import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { RootState } from '../redux/store';
 import { useLanguage } from '../contexts';
+import {
+  fetchWeatherStart,
+  fetchWeatherSuccess,
+  fetchWeatherFailure,
+} from '../redux/weather/slice';
 
 export const useWeatherData = () => {
+  const dispatch = useDispatch();
   const { selectedCity } = useSelector((state: RootState) => state.cityState);
-  const [weatherData, setWeatherData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { currentWeather, newWeather } = useSelector(
+    (state: RootState) => state.weatherState,
+  );
   const { language } = useLanguage();
 
   useEffect(() => {
     if (!selectedCity) return;
 
-    setLoading(true);
+    dispatch(fetchWeatherStart());
 
     axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=f77e16ce3e2db538fd7addd545dc6ea8&lang=${language}&units=metric`,
       )
       .then((response) => {
-        setWeatherData(response.data);
-        setLoading(false);
+        dispatch(fetchWeatherSuccess(response.data));
       })
       .catch((error) => {
-        setError(error);
-        setLoading(false);
+        dispatch(fetchWeatherFailure(error.message));
       });
-  }, [selectedCity, language]);
+  }, [selectedCity, language, dispatch]);
 
-  return { weatherData, loading, error };
+  return { currentWeather, newWeather };
 };
