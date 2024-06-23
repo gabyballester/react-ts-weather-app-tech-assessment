@@ -1,6 +1,6 @@
-# Project: Weather App
+# Project: Weather App Tech Assessment
 
-This is a weather forecast application that allows users to switch between different languages [Spanish, English] and cities [London, Toronto, Singapore]. This capability provides a personalized and adaptable experience, ensuring users can access relevant information conveniently and effectively.
+This is a weather forecast tech assessment application that allows users to switch between different languages [Spanish, English] and cities [London, Toronto, Singapore]. This capability provides a personalized and adaptable experience, ensuring users can access relevant information conveniently and effectively.
 
 ## Used Technologies
 
@@ -60,9 +60,11 @@ npm run test:watch:all: Runs Jest in watch all mode.
 
 ### Testing
 
-In addition to a dummy test, there are tests to ensure it behaves as expected, which are listed here:
+There are tests to ensure it behaves as expected, which are listed here:
 
+- Test.test.tsx (dummy test)
 - App.test.tsx
+- capitalizeText.test.ts
 
 ### Contributing
 

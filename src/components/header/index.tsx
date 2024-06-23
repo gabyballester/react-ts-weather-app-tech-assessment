@@ -21,8 +21,8 @@ export const Header = () => {
       </Heading>
 
       <Box display="flex" gap="10">
-        <CitySelector />
-        <LanguageSwitch />
+        <CitySelector data-testid="city-selector" />
+        <LanguageSwitch data-testid="language-switch" />
       </Box>
     </Box>
   );
