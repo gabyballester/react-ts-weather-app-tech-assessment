@@ -1,10 +1,8 @@
 # Project: Weather App
 
-## Made with: React + TypeScript
-
 This is a weather forecast application that allows users to switch between different languages [Spanish, English] and cities [London, Toronto, Singapore]. This capability provides a personalized and adaptable experience, ensuring users can access relevant information conveniently and effectively.
 
-## Features
+## Used Technologies
 
 - **Vite**: Fast, modern development setup.
 - **React**: Front-end library for building user interfaces.
@@ -16,7 +14,7 @@ This is a weather forecast application that allows users to switch between diffe
 - **React Testing Library**: Lightweight testing library for React.
 - **Chakra UI**: Component library for styling.
 - **i18Next**: Internationalization library for English and Spanish translations.
-- **Redux Toolkit**: State management library for managing global state.
+- **Redux Toolkit**: State management library for managing global states.
 
 ### Getting Started
 
